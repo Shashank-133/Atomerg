@@ -1,0 +1,17 @@
+{
+  "name": "atomberg-goalportal",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AtomQuest Hackathon 1.0 - Goal Setting & Tracking Portal",
+  "scripts": {
+    "dev": "concurrently -k -n SERVER,CLIENT -c green,cyan \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install",
+    "build": "npm --prefix client run build",
+    "start": "npm --prefix server start"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
